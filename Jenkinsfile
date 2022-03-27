@@ -4,8 +4,8 @@ node{
   }
   stage('Compile-Package'){
     // Get maven home path
-   def mvnHome = tool name: 'Maven', type: 'maven'
-    sh ``${mvnHome}/bin/mvn package``
+   def M2_HOME = tool name: 'Maven', type: 'maven'
+    sh ``${apache-maven-3.8.5}/bin/mvn package``
   }
   
 }
